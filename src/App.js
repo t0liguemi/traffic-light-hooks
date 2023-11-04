@@ -17,7 +17,7 @@ function App() {
           <div className={`purpleLightBulb ${trafficLightState === 3 ? "selected" : ""} ${purpleHide === true ? "hideLight" : ""}`} onClick={() => setLightState(3)}></div>
         </div>
         <button className="nextLight" onClick={() => setLightState((trafficLightState + 1) % (purpleHide === true ? 3 : 4))}>Next Light</button>
-        <button className="addLightButton" onClick={() => setPurpleState(false)}>Add an extra light</button>
+        <button className={`addLightButton ${purpleHide === true ? "" : "hideLight"}`} onClick={() => setPurpleState(false)}>Add an extra light</button>
       </div>
     </div >
 
